@@ -1,6 +1,6 @@
 .site-header {
-  padding-top: $space-1;
-  padding-bottom: $space-2;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
 }
 
 .site-header a {
@@ -11,6 +11,8 @@
 
 .site-header .site-title {
   font-size: $h2;
+  text-align: center;
+
 }
 
 .site-nav {
