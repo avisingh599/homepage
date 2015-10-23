@@ -16,7 +16,7 @@ My <a markdown="0" href="{{ site.url }}/assets/resume.pdf">résumé [PDF]</a>, l
 ##<a name="pubs"></a>Publications
 **Recurrent Neural Networks for Driver Activity Anticipation via Sensory-Fusion Architecture** [[arXiv link]](http://arxiv.org/abs/1509.05016)
 <br>*Ashesh Jain, **Avi Singh**, Hema S Koppula, Shane Soh, Ashutosh Saxena*
-<br>International Conference on Robotics and Automation (ICRA) 2016 **(under review)**
+<br>**under review** at International Conference on Robotics and Automation (ICRA) 2016 
 <!--[![preview](/images/icra2016/sample.jpg)](http://arxiv.org/abs/1509.05016)-->
 
 An ealier version of the above work:
