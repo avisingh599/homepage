@@ -13,22 +13,28 @@ share: false
 
 <h3 class="nomargin">Brain4Cars: Learning Temporal Models to Anticipate Driving Maneuvers </h3>
 
-Mentor:[Prof. Ashutosh Saxena](http://cs.stanford.edu/~asaxena) and  [Ashesh Jain](http://www.asheshjain.org) <br>
+Guide:[Prof. Ashutosh Saxena](http://cs.stanford.edu/~asaxena) and  [Ashesh Jain](http://www.asheshjain.org) <br>
 At **Cornell University** in collaboration with **Stanford AI Lab** <br>
-[arXiv pre-print](http://arxiv.org/abs/1509.05016) | [website](http://www.brain4cars.com) <br> <br>
-The project attempts to anticipate driving maneuvers using information from driver-facing and road-facing cameras. My contributions to the project are:
-
-* **Revamped the Computer Vision pipeline** of the project by incorporating a Constrained Local Neural Field model for enhanced head pose tracking of the driver. This made the tracking robust to changes in illumination and pose, while providing consistent optical flow trajectories of facial landmarks and rich head pose features. 
-* Improved the training algorithm for Autoregressive Input Output HMMs by initializing them with Gaussian Mixture Models, and using LBFG-S optimization algorithm for minimizing the cost function. 
-* I carried out extensive experiments on the Brain4Cars dataset that improved the performance from a Precision/Recall of **77.4/71.2 to 86.7/78.2**. Further experimenting on Recurrent Neural Networks with Long Short Term Memory (LSTM) units boosted the performance to a Precision/Recall of **90.5/87.4**.
-* Co-authored a [paper](http://arxiv.org/abs/1509.05016) which is now under review at ICRA 2016. 
+[arxiv pre-print](http://arxiv.org/abs/1509.05016) | [project website](http://www.brain4cars.com) <br>
 
 ![Improved face tracking](/images/icra2016/feat_compare_3.jpg)  |  ![Anticipatory Recurrent Neural Net architecture](/images/icra2016/fusionRNN.png)
 
-**The project in popular press**: 
+The project attempts to anticipate driving maneuvers using information from driver-facing and road-facing cameras. My contributions to the project are:
+
+* Revamped the Computer Vision pipeline of the project by incorporating a Constrained Local Neural Field model for enhanced head pose tracking of the driver. This made the tracking robust to changes in illumination and pose, while providing consistent optical flow trajectories of facial landmarks and rich head pose features. 
+* Improved the training algorithm for Autoregressive Input Output HMMs by initializing them with Gaussian Mixture Models, and using LBFG-S optimization algorithm for minimizing the cost function. 
+* I carried out extensive experiments on the Brain4Cars dataset that improved the performance from a Precision/Recall of **77.4/71.2 to 86.7/78.2**. 
+* Further experimenting on Long Short Term Memory (LSTM) networks boosted the performance to a Precision/Recall of **90.5/87.4**.
+* Co-authored a [paper](http://arxiv.org/abs/1509.05016) which is now under review at ICRA 2016. 
+
+The project in popular press: 
 
 
 <div id="images">
+
+<a href="http://www.technologyreview.com/news/541866/this-car-knows-your-next-misstep-before-you-make-it/" target="_blank">
+	<img  HEIGHT="30"  class="img-responsive" src="/images/mit.png" alt="" />
+</a>
 
 <a href="http://fortune.com/2015/09/18/artificial-intelligence-cars/" target="_blank">
 	<img  HEIGHT="30"  class="img-responsive" src="/images/fortune.png" alt="" />
@@ -38,19 +44,30 @@ The project attempts to anticipate driving maneuvers using information from driv
 	<img HEIGHT="30"  class="img-responsive" src="/images/forbes.jpg" />
 </a>
 
-<a href="http://fusion.net/story/119737/the-car-that-knows-when-youll-get-in-an-accident-before-you-do/" target="_blank">  
-    <img HEIGHT="30"  class="img-responsive" src="/images/fusion.png" />
-</a>
-
 </div>
 
 ---
 
+<h3 class="nomargin">Deep Learning for Visual Question Answering </h3>
+
+Guide:[Prof. Amitabh Mukherjee](http://www.cse.iitk.ac.in/users/amit/) <br>
+At IIT-Kanpur as a course project <br>
+[poster](http://home.iitk.ac.in/~avisingh/cs671/project/poster.pdf) | [code](https://github.com/avisingh599/visual-qa) | [blog](http://avisingh599.github.io/deeplearning/visual-qa/)<br>
+
+![Sample Results](/images/vqa/sample_results.jpg) 
+
+I built a system that can answer open-ended questions about images, using ConvNets, LSTMs and Word Embeddings as bulding blocks. I worked with [VQA](http://www.visualqa.org) dataset, which has over 750K questions about images. The two main models implemented in the system are:
+
+* **CNN + BOW Model**: An images is passed through a Convolutional Neural Net, and the activations of the last layer before softmax are extracted, which gives us a 4096-dimensional representation of the image. For every word in the question, we convert it to its word vector, and then we sum those vectors up. The image vector and the question vector are then concatenated and passed through a Multi Layer Perceptron with three fully connected layers and 50% dropout. A softmax layer at the end gives a probabily distribution over the possible set of answers. An accuracy of 44.3% was obtained on the val set of the VQA dataset. An effecient implmentation allowed a training speed of 2.5 minutes/epoch for 215K image-question pairs, using a batch size of 128.
+* **CNN + LSTM Model**: Instead of simply summing the word vectors, we pass them to a Long Short Term Memory Network in a sequential fashion. The output of the LSTM after all the word vectors have been passes is used as a representation for the question. This question represented is then concatenated with image features from CNN and passed thorugh a Multi Layer Perceptron, and the entire system is trained end-to-end (minus the ConvNet). This LSTM based model boosted the performance to 47.8% on the val set of the VQA dataset. An effecient implmentation allowed a training speed of 3.5 minutes/epoch for 215K image-question pairs, using a batch size of 128.
+
+----
+
 
 <h3 class="nomargin">Stereo and Monocular Visual Odometry</h3>
-Mentor: [Prof. KS Venkatesh](http://home.iitk.ac.in/~venkats/)<br>
+Guide: [Prof. KS Venkatesh](http://home.iitk.ac.in/~venkats/)<br>
 At Computer Vision Lab, Electrical Engineering, IIT-Kanpur <br>
-[github-1](https://github.com/avisingh599/mono-vo) | [github-2](https://github.com/avisingh599/vo-howard2008)  <br> <br>
+[code-1](https://github.com/avisingh599/mono-vo) | [code-2](https://github.com/avisingh599/vo-howard2008)  <br> <br>
 I implemented three different visual odometry systems ( two stereo and one monocular), and evaluated them on the KITTI Visual Odometry benchmark.
 
 #### Stereo Visual Odometry
@@ -67,7 +84,7 @@ I implemented three different visual odometry systems ( two stereo and one monoc
 
 <h3 class="nomargin">Landmark Based Robot Localization using RGB-D Data</h3>
 
-Mentor: [Arjun Bashin](https://www.linkedin.com/pub/arjun-bhasin/ba/86b/2a8)<br>
+Guide: [Arjun Bashin](https://www.linkedin.com/pub/arjun-bhasin/ba/86b/2a8)<br>
 At Mechatronics Lab, Mechanical Engineering, IIT-Kanpur <br>
 
 * Geometric Triangulation was used to determine the pose (modelled as a set of random variables with
@@ -81,7 +98,7 @@ to arrive at the uncertainty in the final pose computed using the Geometric Loca
 ---
 
 <h3 class="nomargin">Hidden CRFs for Human Activity Classification from RGB-D sequences</h3>
-Mentor: [Prof. Vinay Namboodiri](https://sites.google.com/site/vinaynamboodiri/)<br>
+Guide: [Prof. Vinay Namboodiri](https://sites.google.com/site/vinaynamboodiri/)<br>
 (Group of two) Course project for CS679: Machine Learning for Computer Vision<br>
 [presentation (PDF)]({{site.url}}/assets/activity-classification.pdf)
 
@@ -92,7 +109,7 @@ Mentor: [Prof. Vinay Namboodiri](https://sites.google.com/site/vinaynamboodiri/)
 --- 
 
 <h3 class="nomargin">DAAnT - Dental Automated Analysis Tool (Computer Vision for intraoral cameras) </h3>
-Mentor: [Dr.Hyunsung Park](https://sites.google.com/site/hyunsung/home), Postdoc at Camera Culture Group, MIT Media Lab<br>
+Guide: [Dr.Hyunsung Park](https://sites.google.com/site/hyunsung/home), Postdoc at Camera Culture Group, MIT Media Lab<br>
 At the week-long RedX camp organised by [Camera Culture Group](http://cameraculture.media.mit.edu/), [MIT Media Lab](http://www.media.mit.edu/)<br><br>
 We devloped Computer Vision algorithms for automated diagnosis of dental problems from images obtained from an intraoral camera. My contribution in the eight-member team was primarily in the following areas:
 
@@ -104,7 +121,7 @@ approaches were implemented and compared.
 ---
 
 <h3 class="nomargin">Scene Flow</h3>
-Mentor: [Prof. KS Venkatesh](http://home.iitk.ac.in/~venkats/)<br>
+Guide: [Prof. KS Venkatesh](http://home.iitk.ac.in/~venkats/)<br>
 At Computer Vision Lab, Electrical Engineering, IIT-Kanpur <br><br>
 Scene Flow is the extension of the well-known Optical Flow to 3D data. 
 
