@@ -11,7 +11,7 @@ I was a research intern at the Computer Science Department, **Cornell University
 
 <!--I am passionate about technology, and erstwhile led the [Electronics Club](http://students.iitk.ac.in/eclub/) of IIT-Kanpur. I have given lectures to audiences of 400+ people, organized workshops and competitions, and mentored freshmen and sophomores through technical [projects](http://students.iitk.ac.in/eclub/projects_14.html).--> I love explaining things in a simpler manner, and have a [blog]({{site.url}}/blog) on this website, apart from authoring guest posts at places like [LearnOpenCV](http://www.learnopencv.com).<!-- I have also given a talk about my work at the [Special Interest Group in Machine Learning (SIGML)](http://www.cse.iitk.ac.in/users/sigml/) at IIT-Kanpur. I love open-source, and try to release as much code as I can on my [github](https://github.com/avisingh599).-->
 
-My <a markdown="0" href="{{ site.url }}/assets/resume.pdf">résumé [PDF]</a>, last updated September 2015. 
+My <a markdown="0" href="{{ site.url }}/assets/cv.pdf">CV [PDF]</a>, last updated December 2015. 
 
 ##<a name="pubs"></a>Publications
 **Recurrent Neural Networks for Driver Activity Anticipation via Sensory-Fusion Architecture** [[arXiv link]](http://arxiv.org/abs/1509.05016)
@@ -20,7 +20,7 @@ My <a markdown="0" href="{{ site.url }}/assets/resume.pdf">résumé [PDF]</a>, l
 <!--[![preview](/images/icra2016/sample.jpg)](http://arxiv.org/abs/1509.05016)-->
 
 An ealier version of the above work:
-<br>**Brain4Cars: Sensory-Fusion Recurrent Neural Models for Driver Activity Anticipation**
+<br>**Brain4Cars: Sensory-Fusion Recurrent Neural Models for Driver Activity Anticipation** [extended abstract [PDF]](/assets/baylearn.pdf)]
 <br>*Ashesh Jain, Shane Soh, Bharad Raghvan, **Avi Singh**, Hema S Koppula, Ashutosh Saxena*
 <br>**Full ORAL** at [BayLearn Symposium](http://www.baylearn.org/), Menlo Park, California, USA, 2015
 
